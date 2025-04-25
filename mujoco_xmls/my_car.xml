@@ -1,0 +1,102 @@
+<mujoco>
+	<option gravity="0 0 -9.81" integrator="RK4"/>
+	<compiler autolimits="true" />
+	<include file="cars/pusher_car/buddy.xml"/>
+	<asset>
+		<texture
+            name="grid"
+            type="2d"
+            builtin="checker"
+            width="512"
+            height="512"
+            rgb1=".1 .2 .3"
+            rgb2=".2 .3 .4"
+        />
+		<material
+            name="grid"
+            texture="grid"
+            texrepeat="5 5"
+            texuniform="true"
+            reflectance=".2"
+        />
+		<material name="car_body" rgba="0.3 0.3 0.7 1" />
+		<material name="goal" rgba="0.0 0.8 0.0 0.5" />
+	</asset>
+
+	<worldbody>
+		<geom type="plane" size="10 10 .01" material="grid" />
+        <!-- <camera name="top" pos="0 0 10" quat="0.707107 0 0 -0.707107" fovy="60" /> -->
+		<camera name="top" pos="0 0 20" euler="0 0 -90" fovy="60" />
+		<!-- Parking spot (goal) -->
+		<site
+            name="goal"
+            pos="5 5 0.001"
+            size="0.3 0.2 0.001"
+            rgba="0 0.8 0 0.5"
+            type="box"
+            euler="0 0 90"
+        />
+
+		<!-- Boundary walls -->
+		<geom
+            name="wall_north"
+            type="box"
+            size="10 0.1 1"
+            pos="0 10 0.5"
+            rgba="0.5 0.5 0.5 1"
+        />
+		<geom
+            name="wall_south"
+            type="box"
+            size="10 0.1 1"
+            pos="0 -10 0.5"
+            rgba="0.5 0.5 0.5 1"
+        />
+		<geom
+            name="wall_east"
+            type="box"
+            size="0.1 10 1"
+            pos="10 0 0.5"
+            rgba="0.5 0.5 0.5 1"
+        />
+		<geom
+            name="wall_west"
+            type="box"
+            size="0.1 10 1"
+            pos="-10 0 0.5"
+            rgba="0.5 0.5 0.5 1"
+        />
+
+		<!-- Obstacle examples -->
+        <geom
+            name="obstacle1"
+            type="box"
+            size="0.1 0.1 0.2"
+            pos="1.0 -1.0 0.05"
+            rgba="0.8 0.2 0.2 1"
+        />
+		<geom
+            name="obstacle2"
+            type="cylinder"
+            size="0.1 0.2 0.2"
+            pos="1.0 1.0 0.05"
+            rgba="0.8 0.2 0.2 1"
+        />
+		<geom
+            name="obstacle3"
+            type="cylinder"
+            size="0.1 0.2 0.2"
+            pos="-1.0 -1.0 0.05"
+            rgba="0.8 0.2 0.2 1"
+        />
+		<geom
+            name="obstacle4"
+            type="cylinder"
+            size="0.1 0.2 0.2"
+            pos="-1.0 1.0 0.05"
+            rgba="0.8 0.2 0.2 1"
+        />
+
+	</worldbody>
+
+</mujoco>
