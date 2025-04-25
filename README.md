@@ -195,8 +195,12 @@ The car parking environment features:
 ### Reward Design
 
 **Step Reward**
+
 $$
-p = (x, y, v_x, v_y, cos(\theta), sin(\theta)) \\
+p = (x, y, v_x, v_y, cos(\theta), sin(\theta))
+$$
+
+$$
 w = (1, 1, 0, 0, 0.1, 0.1)
 $$
 
@@ -214,6 +218,7 @@ r_c = -15
 $$
 
 **Success Reward**
+
 $$
 r_g = 15
 $$
