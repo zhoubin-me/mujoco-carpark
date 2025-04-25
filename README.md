@@ -146,7 +146,7 @@ uv run tensorboard --logdir runs
 Test our pretrained model
 
 ```bash
-uv run train_mujooc_ppo_ours.py --next-phase --model-path model_best_ppo_phase2.pt
+uv run train_mujooc_ppo_ours.py --next-phase --model-path model_best_ppo_phase2.pt --render
 ```
 
 Will give **100%** success rate
@@ -159,7 +159,7 @@ uv run train_mujooc_ppo_ours.py --next-phase --model-path runs/ppo_CarParkingMuj
 #### Test SAC
 Test our pretrained model
 ```bash
-uv run train_mujoco_sac_her_sb3.py --model-path model_best_sac.zip
+uv run train_mujoco_sac_her_sb3.py --model-path model_best_sac.zip --render
 ```
 Will give **98%** success rate
 
