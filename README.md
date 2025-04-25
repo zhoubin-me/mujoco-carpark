@@ -2,8 +2,8 @@
 
 A reinforcement learning environment for car parking using MuJoCo physics simulator. This project implements a car parking task where an agent learns to park a car in a designated spot using various reinforcement learning algorithms.
 
-![](mujoco_screen_shot.png)
-![](mujoco_screen_shot2.png)
+![](assets/mujoco_screen_shot.png)
+![](assets/mujoco_screen_shot2.png)
 
 
 ## Features
@@ -119,20 +119,20 @@ Keyboard controls:
 
 ### Comparison of our implemented tuned PPO with Stable Baselines' original PPO
 
-![PPO Success Rate Comparison](PPO_Success_Rate.png)
+![PPO Success Rate Comparison](assets/PPO_Success_Rate.png)
 
-![PPO Reward Comparison](PPO_Episodic_Reward.png)
+![PPO Reward Comparison](assets/PPO_Episodic_Reward.png)
 
 Second Phase Training (red)
-![](PPO_2nd_Phase.png)
+![](assets/PPO_2nd_Phase.png)
 
 ### Comparison of our tuned HER-SAC-SB3 with Stable Baselines' original SAC
 
 
 
-![PPO Success Rate Comparison](SAC_Success_Rate.png)
+![PPO Success Rate Comparison](assets/SAC_Success_Rate.png)
 
-![PPO Reward Comparison](SAC_Episodic_Reward.png)
+![PPO Reward Comparison](assets/SAC_Episodic_Reward.png)
 
 
 ### View my training logs by yourself
